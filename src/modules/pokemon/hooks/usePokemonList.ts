@@ -12,7 +12,7 @@ export const usePokemonList = () => {
     searchPokemons();
   }, []);
 
-  const getPokemonInterface = ({ id, name, types, sprites, weight, moves }: respPokemon) => ({
+  const getPokemonInterface = ({ id, name, types, sprites, weight, moves }: any) => ({
     img: sprites["front_default"],
     name,
     id,
