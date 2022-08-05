@@ -89,7 +89,7 @@ export default function Home() {
                 )}
                 <div className="d-flex flex-wrap">
                   {pokemons?.map((pokemon: PokemonCardData) => (
-                    <PokemonCard id= {pokemon.id} pokemon={pokemon} />
+                    <PokemonCard key= {pokemon.id} pokemon={pokemon} />
                   ))}
                 </div>
               </div>
