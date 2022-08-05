@@ -52,19 +52,19 @@ export default function Home() {
               id="searchCard"
               value={search}
               placeholder="Buscar"
-              onChange={(e) =>  setSearch(e.target.value)}
+              onChange={(e) => setSearch(e.target.value)}
               onKeyUp={searchPage}
             ></input>
           </div>
 
-          {noFound ? (
-            <NoFound term={search} />
-          ) : loading ? (
+          {loading ? (
             <Loading />
+          ) : noFound ? (
+            <NoFound term={search} />
           ) : (
             <div className="row">
               <div className="col-8 d-flex flex-wrap">
-                {search === '' && (
+                {search === "" && (
                   <div className="row p-5 flex-between ">
                     {pokemonData?.previous ? (
                       <button className={styles.buttonCtrl} onClick={prevPage}>
@@ -89,7 +89,7 @@ export default function Home() {
                 )}
                 <div className="d-flex flex-wrap">
                   {pokemons?.map((pokemon: PokemonCardData) => (
-                    <PokemonCard key= {pokemon.id} pokemon={pokemon} />
+                    <PokemonCard key={pokemon.id} pokemon={pokemon} />
                   ))}
                 </div>
               </div>
