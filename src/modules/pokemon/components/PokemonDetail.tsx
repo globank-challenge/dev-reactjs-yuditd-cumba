@@ -1,4 +1,4 @@
-import { PokemonCardData } from "../interfaces";
+import { PokemonCardData, Type } from "../interfaces";
 import styles from "../styles/styles.module.css";
 
 export const PokemonDetail = ({ selected }: { selected: PokemonCardData }) => {
@@ -14,7 +14,7 @@ export const PokemonDetail = ({ selected }: { selected: PokemonCardData }) => {
           <div className="col-8">
             <p className={styles.detailTitle}>Tipo:</p>
             <div className="d-flex flex-center">
-              {selected?.types?.map(({ type }: any) => (
+              {selected?.types?.map(({ type }) => (
                 <img
                   className="w-small"
                   src={require(`../assets/${type.name}-icon.png`)}

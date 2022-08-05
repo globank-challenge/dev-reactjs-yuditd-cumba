@@ -1,8 +1,9 @@
 import { useContext } from "react";
+import { PokemonCardData } from "../interfaces";
 import { PokemonSelectedContext } from "../pages/Home";
 import styles from "../styles/styles.module.css";
 
-export const PokemonCard = ({ pokemon }: any) => {
+export const PokemonCard = ({ pokemon }: { pokemon: PokemonCardData}) => {
   const { setSelected } = useContext(PokemonSelectedContext);
   const selectPokemon = () => {
     setSelected(pokemon);

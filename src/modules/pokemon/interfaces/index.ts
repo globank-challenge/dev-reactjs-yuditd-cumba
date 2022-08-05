@@ -32,10 +32,14 @@ interface Sprite {
     front_shiny: string
     front_shiny_female:string 
 }
-interface Type {
+export interface Type {
     slot: number,
     type: {
         name: string | null,
         url: string | null
     }
+}
+
+export interface respPokemon {
+    id: string, name: string, types: string, sprites: Sprite[], weight:string, moves?: string[]
 }

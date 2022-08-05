@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { respPokemon } from "../interfaces";
 import { PokemonCardData, PokemonData, PokemonResult } from "../interfaces";
 import { getData, getPokemonsByName } from "../services";
 
@@ -11,7 +12,7 @@ export const usePokemonList = () => {
     searchPokemons();
   }, []);
 
-  const getPokemonInterface = ({ id, name, types, sprites, weight, moves }: any) => ({
+  const getPokemonInterface = ({ id, name, types, sprites, weight, moves }: respPokemon) => ({
     img: sprites["front_default"],
     name,
     id,
