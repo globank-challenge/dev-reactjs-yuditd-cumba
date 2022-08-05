@@ -7,7 +7,7 @@ export default function Navigation() {
       <BrowserRouter>
         <Routes>
           {routes.map(({ path, Component }) => (
-            <Route path={path} element={<Component />} />
+            <Route path={path} key={path} element={<Component />} />
           ))}
         </Routes>
       </BrowserRouter>
